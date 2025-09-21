@@ -1,0 +1,30 @@
+import { RowFlex } from '../dataset/enum/Row'
+import { IElement, IElementMetrics } from './Element'
+
+export type IRowElement = IElement & {
+  metrics: IElementMetrics
+  style: string
+  left?: number
+}
+
+export interface IRow {
+  width: number
+  height: number
+  ascent: number
+  rowFlex?: RowFlex
+  startIndex: number
+  isPageBreak?: boolean
+  isList?: boolean
+  listIndex?: number
+  offsetX?: number
+  offsetY?: number
+  elementList: IRowElement[]
+  isWidthNotEnough?: boolean
+  rowIndex: number
+  isSurround?: boolean
+  // Multi-column annotations (optional; used when columns are enabled)
+  sectionId?: string
+  columnIndex?: number
+  columnStartX?: number
+  columnInnerWidth?: number
+}
