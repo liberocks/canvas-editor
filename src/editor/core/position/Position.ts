@@ -683,13 +683,6 @@ export class Position {
             if (finalPositionIndex >= elementList.length) {
               finalPositionIndex = elementList.length - 1
             }
-
-            console.log('Multi-column simple fix:', {
-              originalIndex: curPositionIndex,
-              correctedIndex: finalPositionIndex,
-              elementAtOriginal: elementList[curPositionIndex]?.value,
-              elementAtCorrected: elementList[finalPositionIndex]?.value
-            })
           }
         }
 

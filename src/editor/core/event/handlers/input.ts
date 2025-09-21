@@ -109,20 +109,12 @@ export function input(data: string, host: CanvasEvent) {
 
         if (row && row.columnStartX !== undefined) {
           // In multi-column layouts, adjust the insertion point forward by 1
-          adjustedStart = start + 1
+          adjustedStart = start
 
           // Make sure we don't go out of bounds
           if (adjustedStart >= elementList.length) {
             adjustedStart = elementList.length
           }
-
-          console.log('Multi-column insertion fix:', {
-            originalStart: start,
-            adjustedStart: adjustedStart,
-            startIndex: startIndex,
-            elementAtOriginal: elementList[start]?.value,
-            elementAtAdjusted: elementList[adjustedStart]?.value
-          })
         }
       }
     }
