@@ -70,7 +70,7 @@ export class TableParticle {
     // 交换起始位置
     if (startTd.x! > endTd.x! || startTd.y! > endTd.y!) {
       // prettier-ignore
-      ;[startTd, endTd] = [endTd, startTd]
+      [startTd, endTd] = [endTd, startTd]
     }
     const startColIndex = startTd.colIndex!
     const endColIndex = endTd.colIndex! + (endTd.colspan - 1)
@@ -514,7 +514,7 @@ export class TableParticle {
     // 交换起始位置
     if (startTd.x! > endTd.x! || startTd.y! > endTd.y!) {
       // prettier-ignore
-      ;[startTd, endTd] = [endTd, startTd]
+      [startTd, endTd] = [endTd, startTd]
     }
     const startColIndex = startTd.colIndex!
     const endColIndex = endTd.colIndex! + (endTd.colspan - 1)

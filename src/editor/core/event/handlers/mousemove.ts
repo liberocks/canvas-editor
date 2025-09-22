@@ -108,7 +108,7 @@ export function mousemove(evt: MouseEvent, host: CanvasEvent) {
     let start = startIndex
     if (start > end) {
       // prettier-ignore
-      ;[start, end] = [end, start]
+      [start, end] = [end, start]
     }
     if (start === end) return
     // 背景文本禁止选区

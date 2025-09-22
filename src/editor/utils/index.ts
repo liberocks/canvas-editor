@@ -47,7 +47,7 @@ export function deepCloneOmitKeys<T, K>(obj: T, omitKeys: (keyof K)[]): T {
     newObj = obj.map(item => deepCloneOmitKeys(item, omitKeys))
   } else {
     // prettier-ignore
-    ;(Object.keys(obj) as (keyof K)[]).forEach(key => {
+    (Object.keys(obj) as (keyof K)[]).forEach(key => {
       if (omitKeys.includes(key)) return
       return (newObj[key] = deepCloneOmitKeys((obj[key as unknown as keyof T] ), omitKeys))
     })
@@ -67,7 +67,7 @@ export function deepClone<T>(obj: T): T {
     newObj = obj.map(item => deepClone(item))
   } else {
     // prettier-ignore
-    ;(Object.keys(obj) as (keyof T)[]).forEach(key => {
+    (Object.keys(obj) as (keyof T)[]).forEach(key => {
       return (newObj[key] = deepClone(obj[key]))
     })
   }
